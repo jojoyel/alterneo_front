@@ -1,8 +1,36 @@
 @import "./_settings";
 
-.button {
+button {
 	margin: 0;
 	border: none;
 	background-color: $primary-color;
 	padding: 1rem 2rem;
+	font-size: 1.2em;
+	border-radius: 5px;
+	text-transform: uppercase;
+
+	transition: .5s ease-in-out;
+
+	&.outlined {
+		border: $primary-color solid 3px;
+		background-color: #ffffff;
+		$test: 1rem;
+		$test2: 2rem;
+		$test3: 3px;
+		padding: calc(#{$test} - #{$test3}) calc(#{$test2} - #{$test3});
+	}
+
+	&.rounded {
+		border-radius: 50px;
+	}
+
+	&:hover {
+		background-color: $primary-light;
+		border-color: $primary-light;
+		cursor: pointer;
+	}
+
+	&:active {
+		background-color: $primary-dark;
+	}
 }
