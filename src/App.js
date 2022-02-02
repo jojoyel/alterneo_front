@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "./components/form/Button";
+import JobOfferSearchCard from "./components/JobOfferSearchCard";
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 			</Button>
 			<Button style="rounded outlined" text="rounded outlined">
 			</Button>
+			<JobOfferSearchCard />
 		</div>
 	);
 };
