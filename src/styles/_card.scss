@@ -1,4 +1,42 @@
+@import "style";
+
 .card {
-	max-width: 20rem;
+	position: relative;
+	display: flex;
+	width: fit-content;
 	background-color: #ECECEC;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 18px;
+
+	> img {
+		width: 200px;
+		height: 200px;
+		border-radius: 5px;
+	}
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 25rem;
+		margin-left: 10px;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			margin-bottom: 1rem;
+
+			> p {
+				color: $light-text;
+
+				&.offer-name {
+					color: #000;
+					font-weight: 700;
+				}
+			}
+		}
+	}
 }

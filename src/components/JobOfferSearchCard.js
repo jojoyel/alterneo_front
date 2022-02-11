@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "./form/Button";
+import '../../src/styles/_card.scss';
 
 const test = {
 	"company": {
@@ -14,13 +15,17 @@ const test = {
 
 const JobOfferSearchCard = (props) => {
 	return (
-		<div className="card">
-			<img src={props.company.avatar_url} alt={"Image de l'entreprise " + props.company.name} />
-			<p>{props.offer_name}</p>
-			<p>{props.contract_type} / {props.company.name}</p>
-			<p>{props.contract_duration}</p>
-			<p>{props.requirements}</p>
-			<Button text="Plus de détails" style="rounded" />
+		<div className="card test">
+			<img src={props.company.avatar_url} alt={"Image de l'entreprise " + props.company.company_name}/>
+			<div>
+				<div>
+					<p className="offer-name">{props.offer_name}</p>
+					<p className="">{props.contract_type} / {props.company.company_name}</p>
+					<p>{props.contract_duration}</p>
+					<p>{props.requirements}</p>
+				</div>
+				<Button text="Plus de détails" style="rounded" icon="chevron_right"/>
+			</div>
 		</div>
 	);
 };
