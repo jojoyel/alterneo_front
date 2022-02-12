@@ -1,35 +1,45 @@
 @import "./_settings";
 
 button {
+	$vert-padding: 1rem;
+	$horizontal-padding: 2rem;
+
+	display: inline-flex;
 	width: fit-content;
 	margin: 0;
+	padding: $vert-padding $horizontal-padding;
 	border: none;
-	background-color: $primary-color;
-	padding: 1rem 2rem;
-	font-size: 1.2em;
 	border-radius: 5px;
+	background-color: $primary-color;
+	font-size: 1.2em;
 	text-transform: uppercase;
 
 	transition: .2s ease-in-out;
 
-	> span {
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 30px;
-		height: available;
+	> .button-content {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+
+		> span {
+			font-size: 30px;
+		}
 	}
 
 	&.outlined {
 		border: $primary-color solid 3px;
 		background-color: #ffffff;
-		$test: 1rem;
-		$test2: 2rem;
-		$test3: 3px;
-		padding: calc(#{$test} - #{$test3}) calc(#{$test2} - #{$test3});
+		$border-width: 3px;
+		padding: calc(#{$vert-padding} - #{$border-width}) calc(#{$horizontal-padding} - #{$border-width});
 	}
 
 	&.rounded {
 		border-radius: 50px;
+	}
+
+	&.iconed {
+		padding: 1rem;
 	}
 
 	&:hover {
