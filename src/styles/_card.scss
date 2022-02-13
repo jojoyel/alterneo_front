@@ -1,26 +1,26 @@
-@import "style";
+@import "./settings";
 
 .card {
-	position: relative;
 	display: flex;
+	flex-direction: row;
+	gap: 1rem;
 	width: fit-content;
 	background-color: #ECECEC;
 	padding: 10px;
 	border-radius: 5px;
 	font-size: 18px;
 
-	> img {
+	> img.company-logo {
 		width: 200px;
 		height: 200px;
 		border-radius: 5px;
 	}
 
-	> div {
+	> div.centered-part {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		width: 25rem;
-		margin-left: 10px;
 
 		> div {
 			display: flex;
@@ -37,6 +37,15 @@
 					font-weight: 700;
 				}
 			}
+		}
+	}
+
+	> div.right-part {
+		display: flex;
+		flex-direction: column;
+
+		> span.emer-lvl-1 {
+			color: #ffc80f;
 		}
 	}
 }
